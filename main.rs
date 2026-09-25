@@ -60,7 +60,8 @@ fn sigmoid(x: f64) -> f64 {
 }
 
 fn main() {
-    let d = data::get_data("data.csv").unwrap();
+    let data_path = concat!(env!("CARGO_MANIFEST_DIR"), "/data.csv");
+    let d = data::get_data(data_path).unwrap();
 
     let inputs = d.training_inputs;
     let outputs = d.training_outputs;
