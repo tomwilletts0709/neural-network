@@ -59,6 +59,8 @@ fn sigmoid(x: f64) -> f64 {
     1.0 / (1.0 + (-x).exp())
 }
 
+fn forward()
+
 fn main() {
     let data_path = concat!(env!("CARGO_MANIFEST_DIR"), "/data.csv");
     let d = data::get_data(data_path).unwrap();
